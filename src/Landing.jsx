@@ -68,6 +68,7 @@ const Landing = () => {
           top: "55%",
           right: "18.5%"
         }}
+        className={"supply"}
       >
         {images}
       </div>
