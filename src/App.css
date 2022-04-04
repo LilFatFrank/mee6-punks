@@ -1,22 +1,4 @@
-.app > img {
+.app {
   width: 100%;
-  z-index: -1;
-  position: absolute;
-}
-.icons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  position: absolute;
-  top: 32%;
-  right: 15%;
-}
-.icons > a {
-  cursor: pointer;
-}
-.connect {
-  position: absolute;
-  right: 19%;
-  bottom: -30px;
-  cursor: pointer;
+  background: #000000;
 }

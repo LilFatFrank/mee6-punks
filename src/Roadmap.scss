@@ -1,0 +1,52 @@
+.roadmap {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: -4px;
+  > img {
+    position: relative;
+    width: 100%;
+  }
+  #cylinder {
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    right: 14%;
+    top: 43%;
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      display: none;
+    }
+  }
+  .token-1 {
+    position: absolute;
+    bottom: 34%;
+    right: 23%;
+    animation: animate 1s linear infinite;
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      width: 24px !important;
+      height: 24px !important;
+    }
+  }
+  .token-2 {
+    position: absolute;
+    bottom: 39%;
+    right: 16%;
+    animation: animate 1s linear infinite;
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      width: 24px !important;
+      height: 24px !important;
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

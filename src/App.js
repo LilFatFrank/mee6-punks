@@ -1,27 +1,30 @@
+import { Web3ReactProvider } from "@web3-react/core";
+import { SnackbarProvider } from "notistack";
+import Web3 from "web3";
 import "./App.css";
+import Faq from "./Faq";
+import Landing from "./Landing";
+import Math from "./Math";
+import Roadmap from "./Roadmap";
+import Why from "./Why";
 
 function App() {
+  function getLibrary(provider) {
+    return new Web3(provider);
+  }
+
   return (
-    <div className="app">
-      <img src="Home.png" alt="Home" />
-      <div className="icons">
-        <a>
-          <img src="Twitter.png" alt="twitter" width={64} height={64} />
-        </a>
-        <a>
-          <img src="Etherscan.png" alt="etherscan" width={64} height={64} />
-        </a>
-        <a>
-          <img src="Discord.png" alt="discord" width={64} height={64} />
-        </a>
-        <a>
-          <img src="Opensea.png" alt="opensea" width={64} height={64} />
-        </a>
-      </div>
-      <span className="connect">
-        <img src="Connect.png" alt="connect" width={180} height={60} />
-      </span>
-    </div>
+    <SnackbarProvider maxSnack={3}>
+      <Web3ReactProvider getLibrary={getLibrary}>
+        <div className="app">
+          <Landing />
+          <Math />
+          <Roadmap />
+          <Why />
+          <Faq />
+        </div>
+      </Web3ReactProvider>
+    </SnackbarProvider>
   );
 }
 
