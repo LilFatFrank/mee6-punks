@@ -198,6 +198,7 @@ const Landing = () => {
                 width={24}
                 height={24}
                 onClick={decrementMintAmount}
+                style={{ cursor: "pointer" }}
               />
               <div>{mintAmount}</div>
               <img
@@ -206,10 +207,11 @@ const Landing = () => {
                 width={24}
                 height={24}
                 onClick={incrementMintAmount}
+                style={{ cursor: "pointer" }}
               />
             </div>
             <div style={{ position: "relative", left: "4px" }}>
-              {CONFIG.DISPLAY_COST}
+              {CONFIG.DISPLAY_COST * mintAmount}
             </div>
             <div style={{ position: "relative", left: "4px" }}>Max 10</div>
           </div>
